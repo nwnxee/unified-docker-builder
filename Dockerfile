@@ -2,6 +2,7 @@ FROM i386/debian:stretch-slim
 LABEL maintainer "jakobknutsen@gmail.com"
 
 RUN buildDeps="build-essential \
+    zip \
     cmake \
     gperf \
     gcc-6 \

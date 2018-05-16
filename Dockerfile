@@ -16,7 +16,8 @@ RUN buildDeps="build-essential \
     pkg-config \
     libmono-2.0-dev \
     openjdk-8-jdk \
-    ant" \
+    ant \
+    libluajit-5.1-dev" \
     && mkdir -p /usr/share/man/man1 \
     && apt-get update \
     && apt-get install -y --no-install-recommends $buildDeps \

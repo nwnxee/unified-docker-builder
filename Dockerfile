@@ -14,7 +14,7 @@ RUN buildDeps="build-essential \
     libssl-dev \
     libhunspell-dev \
     pkg-config \
-    libmono-2.0-dev \
+    libmono-2.0-dev:i386 \
     openjdk-8-jdk \
     ant \
     libluajit-5.1-dev" \

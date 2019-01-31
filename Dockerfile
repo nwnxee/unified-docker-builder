@@ -9,6 +9,7 @@ RUN buildDeps="build-essential \
     g++-6 \
     default-libmysqlclient-dev \
     libpq-dev \
+    libsqlite3-dev \
     libseccomp-dev \
     ruby-dev \
     libssl-dev \

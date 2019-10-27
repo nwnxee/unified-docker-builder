@@ -1,12 +1,12 @@
-FROM i386/debian:stretch-slim
+FROM i386/debian:buster-slim
 LABEL maintainer "jakobknutsen@gmail.com"
 
 RUN buildDeps="build-essential \
     zip \
     cmake \
     gperf \
-    gcc-6 \
-    g++-6 \
+    gcc-7 \
+    g++-7 \
     default-libmysqlclient-dev \
     libpq-dev \
     libsqlite3-dev \

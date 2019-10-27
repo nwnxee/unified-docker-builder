@@ -16,10 +16,7 @@ RUN buildDeps="build-essential \
     libhunspell-dev \
     pkg-config \
     libmono-2.0-dev:i386 \
-    openjdk-8-jdk \
-    ant \
     libluajit-5.1-dev" \
-    && mkdir -p /usr/share/man/man1 \
     && apt-get update \
     && apt-get install -y --no-install-recommends $buildDeps \
     && apt-get clean \

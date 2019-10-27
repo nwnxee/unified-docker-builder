@@ -1,4 +1,4 @@
-FROM i386/debian:buster-slim
+FROM debian:buster-slim
 LABEL maintainer "jakobknutsen@gmail.com"
 
 RUN buildDeps="build-essential \

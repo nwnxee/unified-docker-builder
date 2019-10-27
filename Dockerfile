@@ -15,7 +15,6 @@ RUN buildDeps="build-essential \
     libssl-dev \
     libhunspell-dev \
     pkg-config \
-    libmono-2.0-dev:i386 \
     libluajit-5.1-dev" \
     && apt-get update \
     && apt-get install -y --no-install-recommends $buildDeps \

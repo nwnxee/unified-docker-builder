@@ -1,12 +1,12 @@
-FROM i386/debian:stretch-slim
+FROM debian:buster-slim
 LABEL maintainer "jakobknutsen@gmail.com"
 
 RUN buildDeps="build-essential \
     zip \
     cmake \
     gperf \
-    gcc-6 \
-    g++-6 \
+    gcc-7 \
+    g++-7 \
     default-libmysqlclient-dev \
     libpq-dev \
     libsqlite3-dev \
@@ -15,11 +15,15 @@ RUN buildDeps="build-essential \
     libssl-dev \
     libhunspell-dev \
     pkg-config \
-    libmono-2.0-dev:i386 \
-    openjdk-8-jdk \
-    ant \
-    libluajit-5.1-dev" \
-    && mkdir -p /usr/share/man/man1 \
+    libluajit-5.1-dev \
+    dotnet-sdk-3.0" \
+    installDeps="ca-certificates wget gpg" \
+    && apt-get update \
+    && apt-get install -y --no-install-recommends $installDeps \
+    && wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.asc.gpg \
+    && wget -q https://packages.microsoft.com/config/debian/10/prod.list \
+    && mv microsoft.asc.gpg /etc/apt/trusted.gpg.d/ \
+    && mv prod.list /etc/apt/sources.list.d/microsoft-prod.list \
     && apt-get update \
     && apt-get install -y --no-install-recommends $buildDeps \
     && apt-get clean \

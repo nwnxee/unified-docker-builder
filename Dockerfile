@@ -16,7 +16,7 @@ RUN buildDeps="build-essential \
     libhunspell-dev \
     pkg-config \
     libluajit-5.1-dev \
-    dotnet-sdk-3.0" \
+    dotnet-sdk-3.1" \
     installDeps="ca-certificates wget gpg" \
     && apt-get update \
     && apt-get install -y --no-install-recommends $installDeps \

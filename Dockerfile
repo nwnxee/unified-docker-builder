@@ -2,6 +2,7 @@ FROM debian:buster-slim
 LABEL maintainer "jakobknutsen@gmail.com"
 
 RUN buildDeps="build-essential \
+    git \
     zip \
     cmake \
     gperf \

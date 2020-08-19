@@ -3,6 +3,7 @@ LABEL maintainer "jakobknutsen@gmail.com"
 
 RUN buildDeps="build-essential \
     git \
+    ssh-client \
     zip \
     cmake \
     gperf \

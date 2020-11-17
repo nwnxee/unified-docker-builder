@@ -1,8 +1,8 @@
 # unified-docker-builder
 
-Builder image for nwnxee/unified.
+This repository has been archived. The builder image factory is now a part of the main [nwnxee/unified](https://github.com/nwnxee/unified/blob/master/builder.Dockerfile) repository and docker images are built through GitHub actions.
 
-This image serves as the factory for compiling the sources, and must be updated whenever the build dependencies change.
+The instructions for building your own image as described below have not changed.
 
 # Run
 
